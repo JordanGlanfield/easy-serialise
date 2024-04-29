@@ -1,7 +1,8 @@
-function generateIntermediate(ref, obIntermediates, fields) {
+function generateIntermediate(ref, obIntermediates, type, fields) {
     const intermediate = {
         ...fields,
-        id: obIntermediates.size
+        id: obIntermediates.size,
+        type
     }
 
     obIntermediates.set(ref, intermediate)
@@ -14,7 +15,7 @@ function isReference(value) {
 }
 
 function serialiseArray(array, obIntermediates) {
-    const intermediate = generateIntermediate(array, obIntermediates, {
+    const intermediate = generateIntermediate(array, obIntermediates, 'Array', {
         elements: []
     })
 
@@ -29,7 +30,7 @@ function serialiseArray(array, obIntermediates) {
 }
 
 function serialiseOb(ob, obIntermediates) {
-    const intermediate = generateIntermediate(ob, obIntermediates, {
+    const intermediate = generateIntermediate(ob, obIntermediates, 'Object', {
         rawFields: {},
         references: {}
     })

@@ -28,6 +28,7 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Object',
                     rawFields: {
                         name: 'Dan',
                         health: 100,
@@ -47,6 +48,7 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Object',
                     rawFields: {
                         name: 'Ed'
                     },
@@ -56,6 +58,7 @@ export const testCases = {
                 },
                 {
                     id: 1,
+                    type: 'Object',
                     rawFields: {
                         name: 'Ben'
                     }
@@ -68,6 +71,7 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Object',
                     rawFields: {
                         name: 'Darren'
                     },
@@ -77,6 +81,7 @@ export const testCases = {
                 },
                 {
                     id: 1,
+                    type: 'Object',
                     rawFields: {
                         name: 'Terrence'
                     },
@@ -94,6 +99,7 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Array',
                     elements: [{ value: 1 }, { value: 'banter' }, { value: false }]
                 }
             ]
@@ -110,10 +116,11 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Array',
                     elements: [{ value: 1 }, { reference: 1 }, { value: 'hello' }]
                 },
                 {
-                    id: 1
+                    id: 1,
                 }
             ]
         },
@@ -123,6 +130,7 @@ export const testCases = {
             serialised: [
                 {
                     id: 0,
+                    type: 'Array',
                     elements: [{ value: 1 }, { reference: 1 }]
                 },
                 {
