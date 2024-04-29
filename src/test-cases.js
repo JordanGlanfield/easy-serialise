@@ -121,10 +121,18 @@ export const testCases = {
                 },
                 {
                     id: 1,
+                    rawFields: {
+                        name: 'Alexandria'
+                    }
                 }
             ]
-        },
-        {
+        }
+    ]
+}
+
+export const customTestCases = {
+    arrays: {
+        circular: {
             description: 'array with circular references',
             original: arrayWithCircularReference,
             serialised: [
@@ -135,11 +143,15 @@ export const testCases = {
                 },
                 {
                     id: 1,
+                    type: 'Object',
+                    rawFields: {
+                        name: 'Alexa'
+                    },
                     references: {
                         owner: 0
                     }
                 }
             ]
         }
-    ]
+    }
 }
